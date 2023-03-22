@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #0e2350;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>We are maximisers. We're out on our own journeys to maximise - be the best at what we choose and care about the most - whether it be our impact, voice, potential, ideas, influence, well-being or more. Because when we maximise ourselves in our inclusive teams, Flipkart is able to deliver the best imaginable value for our customers, stakeholders and the planet!</p>
+  
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIpxYi1tspYpBDWAt4qeVB37ZEomzAvMXG0Q&usqp=CAU" alt="Jane" style="width:50%;margin-left:100px; ">
+      <div class="container">
+        <h2 style="    margin-left: 70px;
+    margin-top: 10px;">Mohammed fayiz</h2>
+        <p style="margin-left:125px ;" class="title">CEO & Founder</p>
+        <p>fayiz is the Group CEO of the screlkart Group since 2018. As the Group CEO,</p>
+        <p>fayiz@gmail.com</p>
+        <p><a href="/myprofile" class="button btn btn-light btn-block btn-lg">Contact </p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="data:image/jpeg;base64,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" alt="Mike" style="width:42% ;margin-left:113px;">
+      <div class="container">
+        <h2 style="    margin-left: 113px;
+    margin-top: 10px;">Mike Ross</h2>
+        <p style="margin-left:137px ;" class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/131305183/original/416322bf5bee6dad5cb0d3d4e857d8cc888a95f1/draw-bighead-cartoon-avatar-of-your-photo.png" alt="John" style="width:82%; margin-left:30px;">
+      <div class="container">
+        <h2 style="    margin-left: 119px;
+    margin-top: 10px;">John Doe</h2>
+        <p style="margin-left:160px ;" class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

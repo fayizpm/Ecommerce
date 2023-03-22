@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  {{#if data}}
+  <div class="container">
+    <table class="table mt-4 p-6">
+      <thead>
+        <tr>
+          <th scope="col">item</th>
+          <th scope="col">Model</th>
+          <th scope="col">price</th>
+          <th scope="col">Qty</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+        <tr>
+          <td><img style="width: 50px; height:50px;" src="http://localhost:3000/images/{{this.image}}.jpg" alt=""></td>
+          <td>{{this.model}}</td>
+          <td>{{this.price}}</td>
+          <td> <select name="number" id="">Qty
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+              <option value="">8</option>
+              <option value="">9</option>
+              <option value="">10</option>
+            </select></td>
+          <td> <a href="/remove/{{this.id}}" class="btn btn-danger" onclick="remove()"> Remove</td> </a>
+
+        </tr>
+        {{/each}}
+
+
+        {{else}}
+
+        <img style="height: 600px;  margin-left: 257px;"
+          src="https://cdn.dribbble.com/users/1010436/screenshots/11302442/empty_cart.jpg" alt="">
+        <a class="btn btn-danger"
+          style="    margin-right: 79px;padding-right: 39px; margin-left: -507px;padding-right: 30px;margin-top: 344px; width: 209px;"
+          href="/user">continue shopping</a>
+        {{/if}}
+      </tbody>
+
+    </table>
+    <section>
+      {{#if data}}
+      <div class="card mb-4">
+        <div class="card-body p-4 d-flex flex-row">
+          {{!-- <div class="form-outline flex-fill">
+            <input type="text" id="form1" class="form-control form-control-lg" />
+            <label class="form-label" for="form1">Discound code</label>
+          </div>
+          <button type="button" class="btn btn-outline-warning btn-lg ms-3">Apply</button> --}}
+          <h2> Total Amount: {{total}}</h2>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <a href="/orders"><button type="button" class="btn btn-warning btn-block btn-lg"> Place your
+              order</button></a>
+        </div>
+      </div>
+      {{/if}}
+  </div>
+  </div>
+  </div>
+  </section>
+  </section>
+  <script>
+    function remove() {
+      alert("want remove ?");
+    }
+  </script>

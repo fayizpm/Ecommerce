@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container"> <br>
+    <a href="/add" class="btn btn-sm btn-primary" style="margin-left: ;"> Add item  </a><br>
+
+     <br>  
+    <table class=" table table-secondary table-  ">
+    <thead class="table-dark">
+        <tr>
+            <th>mobilename</th>
+            <th>model</th>
+            <th>price</th>
+            <td>image</td>
+            <td></td>
+
+        </tr>
+    </thead>
+    <tbody>
+    {{#each data}}
+        <tr>
+            <td>{{this.mobile_name}} </td>
+            <td>{{this.model}} </td>
+            <td> {{this.price}}</td>
+            <td> <img style="width: 80px;height: 80px" src='http://localhost:3000/images/{{this.id}}.jpg' alt=""> </td>
+
+            <td>
+             <a href="/edit/{{this.id}}"  class="btn btn-sm btn-primary">edit</button></a>
+        <a href="/delete/{{this.id}}" class="btn btn-sm btn-danger" on
+                Click='delete()'> Delete</a>
+
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </table>
+    </div>
+</body>
+
+</html>
+<script>
+    function delete(){
+        alert("are you sure you want delete item ?");
+    }
+</script>
